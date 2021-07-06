@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace homeWork4_1
 {
@@ -6,33 +6,22 @@ namespace homeWork4_1
     {
         static void Main(string[] args)
         {
-            int quantityGold_Hero;
-            int crystal_buyHero;
-            int price_forOneCrystal = 10;
-            
-            Console.WriteLine("Добро пожаловать в магазин кристаллов!");
-            Console.WriteLine("Как ни странно, здесь Вы можете купить кристаллы");
-            Console.Write("Скажите, сколько золота у Вас есть?:");
-            quantityGold_Hero = Convert.ToInt32(Console.ReadLine());
+            int userGold;
+            int userCrystal;
+            int userGoldLeft;
+            int crystalPrice = 10;
 
-            Console.WriteLine("Мои кристаллы стоят " + price_forOneCrystal + " золотых за 1 штуку");
-            Console.Write("Сколько кристаллов Вы хотите купить?: ");
-            crystal_buyHero = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Перед собой вы видите лавку торговца");
+            Console.WriteLine("Вы решили отдохнуть после долгой дороги и прикупить себе немного кристаллов");
+            Console.WriteLine("С надеждой вы заглянули в свой пыльный кошелёк.");
+            Console.Write("- Привет, путник! - с вами здоровается торговец. - Гляжу устал. Не желаешь купить несколько кристаллов? Всего по " + crystalPrice + " золотых за штуку. Сколько золота у тебя есть?: ");
+            userGold = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Поразмыслив немного вы решили купить кристаллов, но сколько?: ");
+            userCrystal = Convert.ToInt32(Console.ReadLine());
+            userGoldLeft = userGold - (userCrystal * crystalPrice);
+            Console.WriteLine("Через некоторое время вы вышли из лавки, слегка опустошив свой кошелёк и прибавив в коллекцию новых кристаллов.");
+            Console.WriteLine("Теперь у вас " + userGoldLeft + " золота и " + userCrystal + " кристаллов. И весь мир у ваших ног!");
 
-            int quantityCrystal_Hero = crystal_buyHero;
-            int quantityGold_Hero_Left = quantityGold_Hero - (crystal_buyHero * price_forOneCrystal);
-
-            Console.Write("Спасибо за покупку. У вас теперь есть " + quantityCrystal_Hero + " кристаллов и осталось " + quantityGold_Hero_Left + " золотых");
          } 
     }
 }   
-            
-        
-   
-
-
-
-
-
-
-        
