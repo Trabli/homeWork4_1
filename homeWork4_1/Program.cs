@@ -8,7 +8,6 @@ namespace homeWork4_1
         {
             int userGold;
             int userCrystal;
-            int userGoldLeft;
             int crystalPrice = 10;
 
             Console.WriteLine("Перед собой вы видите лавку торговца");
@@ -18,9 +17,9 @@ namespace homeWork4_1
             userGold = Convert.ToInt32(Console.ReadLine());
             Console.Write("Поразмыслив немного вы решили купить кристаллов, но сколько?: ");
             userCrystal = Convert.ToInt32(Console.ReadLine());
-            userGoldLeft = userGold - (userCrystal * crystalPrice);
+            userGold -= userCrystal * crystalPrice;
             Console.WriteLine("Через некоторое время вы вышли из лавки, слегка опустошив свой кошелёк и прибавив в коллекцию новых кристаллов.");
-            Console.WriteLine("Теперь у вас " + userGoldLeft + " золота и " + userCrystal + " кристаллов. И весь мир у ваших ног!");
+            Console.WriteLine("Теперь у вас " + userGold + " золота и " + userCrystal + " кристаллов. И весь мир у ваших ног!");
 
          } 
     }
